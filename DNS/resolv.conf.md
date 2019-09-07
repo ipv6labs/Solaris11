@@ -47,11 +47,28 @@ config/search                                                  astring     "exam
 config/nameserver                                              net_address 192.168.0.1 172.16.0.1 10.0.0.1
 ```
 
+```
+# svcadm refresh svc:/network/dns/client:default
+```
 
+writen new values after "svcadm refresh"
 
+```
+# egrep -v "^$|^#" /etc/resolv.conf
+domain  example.jp
+search  example.jp example.com example.net
+options timeout:2 attempts:2
+nameserver      192.168.0.1
+nameserver      172.16.0.1
+nameserver      10.0.0.1
+```
 
+#### Syntax check
 
-
+```
+# nscfg validate svc:/network/dns/client:default && echo OK
+OK
+```
 
 
 
