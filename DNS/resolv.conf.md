@@ -9,6 +9,32 @@ Over wite /etc/resolv.conf from "svccfg network/dns/client"
 # nscfg export svc:/network/dns/client:default
 ```
 
+Edit and save(:wq!) /etc/resolv.conf is read only file.
+
+```
+# vi /etc/resolv.conf
+```
+
+Commit new settings.
+
+```
+# nscfg import -f svc:/network/dns/client:default
+```
+
+Check.
+
+```
+# nscfg export svc:/network/dns/client:default
+# cat /etc/resolv.conf
+```
+
+#### Syntax check
+
+```
+# nscfg validate svc:/network/dns/client:default && echo OK
+OK
+```
+
 
 ## Operation by svccfg command
 
