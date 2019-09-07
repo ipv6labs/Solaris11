@@ -1,7 +1,16 @@
 # /etc/resolv.conf
 
-## Operation by svccfg command
 
+## Operation by Text Editor (Old Style)
+
+Over wite /etc/resolv.conf from "svccfg network/dns/client"
+
+```
+# nscfg export svc:/network/dns/client:default
+```
+
+
+## Operation by svccfg command
 
 ### input
 
