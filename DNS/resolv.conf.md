@@ -36,3 +36,23 @@ See also resolv.conf(4)
 
 ### refresh
 
+Last check, this values not written /etc/resolv.conf yet.
+
+```
+# svccfg -s network/dns/client listprop | grep ^config/
+config/value_authorization                                     astring     solaris.smf.value.name-service.dns.client
+config/domain                                                  astring     example.jp
+config/options                                                 astring     "timeout:2 attempts:2"
+config/search                                                  astring     "example.jp" "example.com" "example.net"
+config/nameserver                                              net_address 192.168.0.1 172.16.0.1 10.0.0.1
+```
+
+
+
+
+
+
+
+
+
+
