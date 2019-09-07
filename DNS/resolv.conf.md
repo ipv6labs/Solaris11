@@ -73,7 +73,7 @@ See also resolv.conf(4)
 
 ### commit
 
-Last check, this values not update /etc/resolv.conf yet.
+Last check, this values not update system and /etc/resolv.conf yet.
 
 ```
 # svccfg -s network/dns/client listprop | grep ^config/
