@@ -1,6 +1,13 @@
 # /etc/resolv.conf
 
 
+### Official
+
+Administering Naming and Directory Services on an Oracle Solaris System / Solaris 11.4
+
+https://docs.oracle.com/cd/E37838_01/html/E60988/compconfig-1.html
+
+
 ## Operation by Text Editor (Old Style)
 
 Over wite /etc/resolv.conf from "svccfg network/dns/client"
