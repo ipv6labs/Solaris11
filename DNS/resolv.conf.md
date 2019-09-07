@@ -15,7 +15,7 @@ Edit and save(:wq!) /etc/resolv.conf is read only file.
 # vi /etc/resolv.conf
 ```
 
-Commit new settings.
+Commit new settings. *immediate update
 
 ```
 # nscfg import -f svc:/network/dns/client:default
