@@ -34,9 +34,9 @@ Max 3 servers.
 See also resolv.conf(4)
 
 
-### refresh
+### commit
 
-Last check, this values not written /etc/resolv.conf yet.
+Last check, this values not update /etc/resolv.conf yet.
 
 ```
 # svccfg -s network/dns/client listprop | grep ^config/
@@ -51,7 +51,7 @@ config/nameserver                                              net_address 192.1
 # svcadm refresh svc:/network/dns/client:default
 ```
 
-writen new values after "svcadm refresh"
+/etc/resolv.conf update after "svcadm refresh"
 
 ```
 # egrep -v "^$|^#" /etc/resolv.conf
@@ -69,7 +69,3 @@ nameserver      10.0.0.1
 # nscfg validate svc:/network/dns/client:default && echo OK
 OK
 ```
-
-
-
-
